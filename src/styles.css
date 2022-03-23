@@ -10,7 +10,7 @@
 h1, h2 {
     font-family: 'Merriweather', Georgia, serif;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
 }
 
@@ -20,31 +20,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+
     font-family: 'Roboto Condensed', Arial, sans-serif;
-
-
-}
-
-.intro {
-   text-align: left;
+    position: relative;
+    top: 70px;
 }
 
 ul {
     list-style: none;
-    border: solid 10px orange;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
+    margin-left: 10px;
 }
 
 
-form label {
-    display: flex;
-    flex-direction: row;
+/*form label {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    gap: 5px;*/
+/**/
+/*}*/
+
+selectioncontainer {
+    max-width: 700px;
+    margin: 10px;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
-    padding: 5px;
 }
 
 /*--------------------------*/
@@ -67,44 +68,45 @@ form label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 20px;
+
+
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    width: 700px;
 }
 
 .icon-img {
     width: 100px;
+    height: 100px;
     padding: 0.001em;
     border: solid 1px lightgrey;
     border-radius: 10%;
 }
 
 .icon-img32 {
-    width: 32px;
+    width: 50px;
     padding: 5px;
     margin: 5px;;
 }
 
-form div {
-    list-style: square;
-    border-style: none;
-}
-
-#head-img {
-    padding: 5px;
-    margin: 5px;
-    border: 2px;
-    border-radius: 20px;
-}
 
 .font-p {
     margin: 5px;
     padding: 5px;
+}
+
+.blankline {
+    padding-bottom: 5px;
 }
 
 .recipe-line {
@@ -113,11 +115,29 @@ form div {
 
 }
 
-#top-img {
-    width: 400px;
+#head-img {
+    width: 500px;
+    padding: 5px;
+    margin: 5px;
+    border: 5px white;
+    border-radius: 20px;
+}
+
+
+#fill-img {
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px;
+    border-radius: 20px;
+}
+
+#on-submit-cuisine {
+justify-content: flex-start;
 }
 
 #author, #tag {
+    margin: 2px;
     width: 50px;
 
 }
@@ -127,8 +147,24 @@ form div {
 
 }
 
+#cuisine-list {
+    text-align: center;
+
+
+}
+
+#button {
+    background-color: orange;
+    font-size: medium;
+    border: solid 5px darkorange;
+    border-radius: 10px;
+    width: 90px;
+    height: 50px;
+
+
+}
+
 #recipe-list {
-    max-width: 500px;
 
 }
 
@@ -137,19 +173,16 @@ form div {
     width: 20%
 }
 
-#on-submit {
 
-}
 
 .sel-cui {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: self-start;
     font-family: 'Merriweather', Georgia, serif;
+    font-size: small;
     padding: 10px;
     margin: 10px;
     text-align: left;
+    border: solid 2px lightgrey;
+    border-radius: 20px;
 }
 
 @media screen and (min-width: 768px) {

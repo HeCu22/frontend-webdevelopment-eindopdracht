@@ -19,7 +19,7 @@ async function fetchRecipeByIngredients(ingredients) {
             }
 
         });
-        const foundRecipes = response.data;
+         const {data: foundRecipes} = response;
 
 
          // create a  list of max 5 lines that uses array of all found

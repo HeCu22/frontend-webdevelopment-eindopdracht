@@ -5,19 +5,20 @@
     <link rel="stylesheet" href="styles.css">
     <title>Recipes</title>
 </head>
-
+<body>
 <head-section class="top">
     <nav class="navbar">
         <img class="icon-img32" src="./assets/icon-menu.png" alt="menu"/>
-        <img id="head-img" src="./assets/logo%20img%20background.png" alt="logo-vegetables" />
+        <img id="head-img" src="./assets/logo%20img%20background.png" alt="logo-vegetables"/>
         <img class="icon-img32" src="./assets/icon-search.png" alt="find recipe"/>
     </nav>
     <h1>Recipes for home-style cookin'</h1>
-    <img id="top-img" src="./assets/imgcookinmoods.jpg" alt="CookingMoods" />
+    <img id="fill-img" src="./assets/imgcookinmoods.jpg" alt="CookingMoods"/>
 
     <h2>What is in your Cooking Kit!</h2>
 </head-section>
-<body>
+<container>
+
 <form id="on-submit">
     <label for="cuisine">
         <input type="radio" id="cuisine" name="select" value="cuisine"/>
@@ -48,9 +49,12 @@
     </label>
 
 </form>
-<ul id="recipe-list">
-    [recipelist]
-</ul>
-<script src="main.js" type="module"></script>
+    <ul id="recipe-list">
+        [recipelist]
+    </ul>
+
+</container>
+<script
+ src="main.js" type="module"></script>
 </body>
 </html>

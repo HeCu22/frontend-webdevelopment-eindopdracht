@@ -2,12 +2,10 @@ function createCuisineList(cuisines) {
 
     const cuisineList = document.getElementById('cuisine-list');
 
-    // Zorg ervoor dat na elke zoekopdracht en dat er altijd het gewenste zoekresultaat op de pagina staat;
+    // make sure every search results in result asked for
     cuisineList.replaceChildren();
 
     // one or more recipe lines are possible
-    // cuisines.map((cuisine) => {
-
         /* ------------------------------------ */
         //   use create element method to fill the DOM tree
         /* ------------------------------------ */
@@ -27,18 +25,14 @@ function createCuisineList(cuisines) {
             cuisineInput.setAttribute("value", `${cuisines[i]}`);
             cuisineInput.setAttribute("text", `${cuisines[i]}`)
 
-            // cuisineLabel.textContent = `${cuisines[i]}`;
-
             // put elements in container input
             cuisineLabel.appendChild(cuisineInput);
+            // put text checkbox after the input
             cuisineInput.after(`${cuisines[i]}`);
 
             // put elements in container label
             cuisineList.appendChild(cuisineLabel);
         }
-        console.log(cuisineList);
-        // userInputfield.value = "";
-
 
 }
 

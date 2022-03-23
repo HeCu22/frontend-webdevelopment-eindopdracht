@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Recipes for home-style cookin'</title>
 </head>
+<body>
 <head-section class="top">
     <nav class="navbar">
         <img class="icon-img32" src="./assets/icon-menu.png" alt="menu"/>
@@ -12,48 +13,56 @@
         <img class="icon-img32" src="./assets/icon-search.png" alt="find recipe"/>
     </nav>
     <h1>Recipes for home-style cookin'</h1>
-    <!--    <img id="top-img" src="./assets/imgcookinmoods.jpg" alt="CookingMoods" />-->
 
-    <h2>Select one of next for Cuisine!</h2>
 </head-section>
-<body class="intro">
-<form id="on-submit-cuisine">
-    <div class="row">
+
+<selectioncontainer class="column">
+
+
+    <selections class="row">
         <img class="icon-img" src="./assets/cuisine.jpg" alt="cuisine"/>
-        <datablock class="column">
-            <datarow class="row">
+        <describingwords class="column">
+            <ul>
+                <li>Title recipe</li>
+                <li>Creative/new</li>
+                <li class="blankline">Cuisine</li>
+            </ul>
+            <p class="blankline"></p>
+
+        </describingwords>
+        <form id="on-submit-cuisine" class="column">
+            <selectauthor class="row">
                 <label for="author">
-                    Creative/new
                     <input type="text" id="author" name="author" placeholder="author"/>
                 </label>
                 <label for="tag">
                     <input type="text" id="tag" name="tab" placeholder="tag"/>
                 </label>
-            </datarow>
-            <datarrowb class="row">
+            </selectauthor>
+
+            <selecttitle class="row">
                 <label for="title">
-                    Title recipe
                     <input type="text" id="title" name="title" placeholder="Fill in title name"/>
                 </label>
-            </datarrowb>
-            <datarowc class="column">
-                <label>
-                    Cuisine
-                </label>
-            </datarowc>
-        </datablock>
+            </selecttitle>
 
-    </div>
-    <input type="submit" value="Start Search"/>
+        <input id="button" type="submit" value="Search"/>
+        </form>
+    </selections>
 
-    <div id="cuisine-list">
-        [cuisineList]
-    </div>
 
-</form>
-<ul id="recipe-list">
-    [recipelist]
-</ul>
+    <cuisineoptions class="row, sel-cui">
+        <h2>Select one of next for Cuisine!</h2>
+        <div id="cuisine-list">
+            [cuisineList]
+        </div>
+    </cuisineoptions>
+
+    <ul id="recipe-list">
+        <img id="fill-img" src="./assets/food-salad.jpg" alt="food-salad"/>
+    </ul>
+
+</selectioncontainer>
 
 
 <script src="./functions/retrieveInput.js" type="module"></script>

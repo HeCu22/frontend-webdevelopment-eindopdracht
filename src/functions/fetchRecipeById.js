@@ -24,7 +24,6 @@ async function fetchRecipeById(inputId) {
         // make array from object detailsRecipe to pass it to createListLines
 
         listItems[0] = detailsRecipe.data;
-        console.log(detailsRecipe.data);
         createListLines(listItems);
 
 
