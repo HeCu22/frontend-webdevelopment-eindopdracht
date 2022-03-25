@@ -6,30 +6,33 @@ import createCuisineList from "./createCuisineList";
 
 //array with cuisines;
 const cuisineList = ["African", "American", "British", "Cajun", "Caribbean", "Chinese", "Eastern European", "European", "French", "German", "Greek", "Indian", "Irish", "Italian", "Japanese", "Jewish", "Korean",
-    "Latin American", "Mediterranean", "Mexican", "Middle Eastern", "Nordic", "Southern", "Spanish", "Thai", "Vietnamese"];
+    "Latin American", "Mediterranean", "Mexican", `Middle Eastern`, "Nordic", "Southern", "Spanish", "Thai", "Vietnamese"];
 
 
 createCuisineList(cuisineList);
 
 
-// reference save of user input menucuisine
-const inputAuthor = document.getElementById('author');
-const inputTag = document.getElementById('tag');
-const inputTitle = document.getElementById('title');
-
-
-const form = document.getElementById('on-submit-cuisine');
+// reference save of user input
+let inputAuthor = document.getElementById('author');
+let inputTags = document.getElementById('tag');
+let inputTitle = document.getElementById('title');
 let inputCuiString = '';
+
+const formSubmit = document.getElementById('on-submit-cuisine');
+
+
+
 // event listner user input
-form.addEventListener("submit", (e) => {
+formSubmit.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // put input of cuisines marked in string
     handleCheckbox();
-    fetchCuiRecipes(inputAuthor.value, inputTag.value, inputCuiString).then();
-
-    // now refresh input
-    inputCuiString = "";
+    buttonDisplay();
+    fetchCuiRecipes(inputAuthor.value, inputTags.value, inputTitle.value, inputCuiString).then();
 })
+
+
 
 function handleCheckbox() {
 
@@ -45,8 +48,17 @@ function handleCheckbox() {
         if (selectCui[i].checked === true) {
             inputCuiString += selectCui[i].value;
             inputCuiString += ",";
+
         }
     }
 }
 
+function buttonDisplay () {
 
+    const buttonDisp = document.getElementById("button-place");
+    let buttonTag = document.createElement("button");
+    buttonTag.setAttribute("id","buttonNext");
+    buttonTag.textContent = "+";
+    buttonDisp.appendChild(buttonTag);
+
+}

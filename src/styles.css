@@ -7,13 +7,18 @@
     padding: 0;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     font-family: 'Merriweather', Georgia, serif;
     font-size: 16px;
     padding: 10px;
     margin: 5px;
 }
 
+h4 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     display: flex;
@@ -41,11 +46,18 @@ ul {
 /**/
 /*}*/
 
-selectioncontainer {
+selcontainer {
+    max-width: 900px;
+    margin: 10px;
+
+}
+
+
+listcontainer {
     max-width: 700px;
     margin: 10px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /*--------------------------*/
@@ -88,7 +100,6 @@ selectioncontainer {
 .icon-img {
     width: 100px;
     height: 100px;
-    padding: 0.001em;
     border: solid 1px lightgrey;
     border-radius: 10%;
 }
@@ -99,21 +110,30 @@ selectioncontainer {
     margin: 5px;;
 }
 
+.blankline {
+    padding-bottom: 5px;
+}
+
+/*---attributes for recipe line items */
 
 .font-p {
     margin: 5px;
     padding: 5px;
+
+}
+.img-p {
+
+    border-radius: 10%;
 }
 
-.blankline {
-    padding-bottom: 5px;
-}
+
 
 .recipe-line {
     display: flex;
     flex-direction: row
 
 }
+/*-----recipe line items */
 
 #head-img {
     width: 500px;
@@ -133,12 +153,12 @@ selectioncontainer {
 }
 
 #on-submit-cuisine {
-justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 #author, #tag {
     margin: 2px;
-    width: 50px;
+    width: 70px;
 
 }
 
@@ -148,43 +168,47 @@ justify-content: flex-start;
 }
 
 #cuisine-list {
-    text-align: center;
-
+    text-align: left;
+    height: 200px;
+    flex-wrap: wrap;
+    padding: 2px;
 
 }
 
-#button {
+#buttonStart, #buttonNext {
     background-color: orange;
     font-size: medium;
     border: solid 5px darkorange;
     border-radius: 10px;
     width: 90px;
-    height: 50px;
+    height: 30px;
+    margin: 5px;
+}
 
-
+#buttonNext {
+    background-color: darkorange;
+    color: white;
+    font-size: medium;
+    border: solid 5px orangered;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
 }
 
 #recipe-list {
-
 }
-
 
 #recipe-list img {
     width: 20%
 }
 
-
-
-.sel-cui {
-    font-family: 'Merriweather', Georgia, serif;
-    font-size: small;
-    padding: 10px;
-    margin: 10px;
-    text-align: left;
-    border: solid 2px lightgrey;
-    border-radius: 20px;
+#message {
+    color: mediumblue;
 }
-
 @media screen and (min-width: 768px) {
 
 }

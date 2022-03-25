@@ -5,6 +5,7 @@ function createListLines(recipes) {
     // Zorg ervoor dat na elke zoekopdracht en dat er altijd het gewenste zoekresultaat op de pagina staat;
     recipeList.replaceChildren();
 
+
     // one or more recipe lines are possible
     recipes.map((recipe) => {
 
@@ -18,7 +19,9 @@ function createListLines(recipes) {
 
         // Create IMG element
         let recipeImg = document.createElement('img');
+        recipeImg.setAttribute('class', 'img-p');
         recipeImg.setAttribute('src', `${recipe.image}`);
+
 
         // Create het titel-element
         const recipeTitle = document.createElement('p');
@@ -37,9 +40,11 @@ function createListLines(recipes) {
         recipeList.appendChild(recipeDiv);
         recipeList.appendChild(recipeId);
 
-        // userInputfield.value = "";
 
     });
+
+
 }
+
 
 export default createListLines;

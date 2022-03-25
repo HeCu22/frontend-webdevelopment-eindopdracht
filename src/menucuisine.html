@@ -16,53 +16,54 @@
 
 </head-section>
 
-<selectioncontainer class="column">
+<selcontainer class="column">
 
-
-    <selections class="row">
+    <sel class="row">
         <img class="icon-img" src="./assets/cuisine.jpg" alt="cuisine"/>
-        <describingwords class="column">
-            <ul>
-                <li>Title recipe</li>
-                <li>Creative/new</li>
-                <li class="blankline">Cuisine</li>
-            </ul>
-            <p class="blankline"></p>
-
-        </describingwords>
         <form id="on-submit-cuisine" class="column">
-            <selectauthor class="row">
+            <cuisineoptions class="column, sel-cui">
+                <h2>Select one of next for Cuisine!</h2>
+                <h4>Cuisine:</h4>
+                <div id="cuisine-list" class="column">
+                    [cuisineList]
+                </div>
+            </cuisineoptions>
+
+            <author class="row">
+                <h4>Creative/new:</h4>
                 <label for="author">
+
                     <input type="text" id="author" name="author" placeholder="author"/>
                 </label>
                 <label for="tag">
-                    <input type="text" id="tag" name="tab" placeholder="tag"/>
+                    <input type="text" id="tag" name="tab" placeholder="tags"/>
                 </label>
-            </selectauthor>
+            </author>
 
-            <selecttitle class="row">
+            <sel-title class="row">
+                <h4>Word in title:</h4>
                 <label for="title">
-                    <input type="text" id="title" name="title" placeholder="Fill in title name"/>
+
+                    <input type="text" id="title" name="title" placeholder="new"/>
                 </label>
-            </selecttitle>
+            </sel-title>
 
-        <input id="button" type="submit" value="Search"/>
+
+            <button id="buttonStart"> Start </button>
         </form>
-    </selections>
+        <div id="button-place"></div>
+    </sel>
+</selcontainer>
+<listcontainer class="row">
 
-
-    <cuisineoptions class="row, sel-cui">
-        <h2>Select one of next for Cuisine!</h2>
-        <div id="cuisine-list">
-            [cuisineList]
-        </div>
-    </cuisineoptions>
+    <div id="message">[message-text]</div>
 
     <ul id="recipe-list">
-        <img id="fill-img" src="./assets/food-salad.jpg" alt="food-salad"/>
+        <!--        <img id="fill-img" src="./assets/food-salad.jpg" alt="food-salad"/>-->
+
     </ul>
 
-</selectioncontainer>
+</listcontainer>
 
 
 <script src="./functions/retrieveInput.js" type="module"></script>
