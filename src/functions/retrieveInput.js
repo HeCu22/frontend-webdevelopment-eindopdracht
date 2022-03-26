@@ -1,5 +1,4 @@
-// import fetchFastRecipes from './fetchFastRecipes'
-
+console.log('hier aangekomen');
 import fetchCuiRecipes from './fetchCuiRecipes';
 import createCuisineList from "./createCuisineList";
 
@@ -8,7 +7,7 @@ import createCuisineList from "./createCuisineList";
 const cuisineList = ["African", "American", "British", "Cajun", "Caribbean", "Chinese", "Eastern European", "European", "French", "German", "Greek", "Indian", "Irish", "Italian", "Japanese", "Jewish", "Korean",
     "Latin American", "Mediterranean", "Mexican", `Middle Eastern`, "Nordic", "Southern", "Spanish", "Thai", "Vietnamese"];
 
-
+console.log('retrieveinput');
 createCuisineList(cuisineList);
 
 

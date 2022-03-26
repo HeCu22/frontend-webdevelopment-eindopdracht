@@ -8,13 +8,12 @@ const selectRadioC = document.getElementById('cuisine');
 const selectRadioH = document.getElementById('healthy');
 const selectRadioQ = document.getElementById('quick');
 
+console.log('e', selectRadioC.value);
 // event listener radio button
 selectRadioC.addEventListener("keyup", (e) => {
     e.preventDefault();
-    // console.log('e', selectRadioC.value);
+    console.log('e', selectRadioC.value);
     menuCuisine();
-    // fetchRecipeByDetails("salad").then();
-
 })
 // event listener radio button
 selectRadioH.addEventListener("keyup", (e) => {
@@ -28,5 +27,7 @@ selectRadioQ.addEventListener("keydown", (e) => {
 })
 
 function menuCuisine() {
-    location.href = "./menucuisine.html";
+    console.log('log');
+    location.href = "./menus/menuCuisine.html";
+
 }

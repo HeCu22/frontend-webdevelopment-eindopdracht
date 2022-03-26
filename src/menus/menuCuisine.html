@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Recipes for home-style cookin'</title>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Creative new or special Cuisine recipes</title>
 </head>
 <body>
 <head-section class="top">
     <nav class="navbar">
-        <img class="icon-img32" src="./assets/icon-menu.png" alt="menu"/>
-        <img id="head-img" src="./assets/logo%20img%20background.png" alt="logo-vegetables"/>
-        <img class="icon-img32" src="./assets/icon-search.png" alt="find recipe"/>
+        <a href="../index.html" target="_self"> <img class="icon-img32" src="../assets/icon-menu.png" alt="Back"/> </a>
+        <img id="head-img" src="../assets/logo%20img%20background.png" alt="logo-vegetables"/>
+        <a href="../menus/recipeDetail.html" target="_self"> <img class="icon-img32" src="../assets/icon-search.png" alt="find recipe"/> </a>
     </nav>
     <h1>Recipes for home-style cookin'</h1>
 
@@ -19,7 +19,7 @@
 <selcontainer class="column">
 
     <sel class="row">
-        <img class="icon-img" src="./assets/cuisine.jpg" alt="cuisine"/>
+        <img class="icon-img" src="../assets/cuisine.jpg" alt="cuisine"/>
         <form id="on-submit-cuisine" class="column">
             <cuisineoptions class="column, sel-cui">
                 <h2>Select one of next for Cuisine!</h2>
@@ -43,29 +43,26 @@
             <sel-title class="row">
                 <h4>Word in title:</h4>
                 <label for="title">
-
                     <input type="text" id="title" name="title" placeholder="new"/>
                 </label>
             </sel-title>
-
-
             <button id="buttonStart"> Start </button>
         </form>
         <div id="button-place"></div>
     </sel>
 </selcontainer>
 <listcontainer class="row">
-
     <div id="message">[message-text]</div>
-
+    <form id="on-submit-detail">
+        <label
+                for="selrec-0"><input type="radio" id="selrec-0" value="639606"text="Classic Greek Moussaka">
+            "https://spoonacular.com/recipeImages/639606-312x231.jpg"
+        </label>
+    </form>
+    </div>
     <ul id="recipe-list">
-        <!--        <img id="fill-img" src="./assets/food-salad.jpg" alt="food-salad"/>-->
-
     </ul>
-
 </listcontainer>
-
-
-<script src="./functions/retrieveInput.js" type="module"></script>
+<script src="../functions/retrieveInput.js" type="module"></script>
 </body>
 </html>
