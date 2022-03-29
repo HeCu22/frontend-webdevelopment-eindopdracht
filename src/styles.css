@@ -26,7 +26,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-
     font-family: 'Roboto Condensed', Arial, sans-serif;
     position: relative;
     top: 70px;
@@ -38,17 +37,14 @@ ul {
 }
 
 
-/*form label {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    align-items: center;*/
-/*    gap: 5px;*/
-/**/
-/*}*/
-
 selcontainer {
     max-width: 900px;
     margin: 10px;
+    text-align: left;
+
+}
+
+.detail {
 
 }
 
@@ -204,6 +200,14 @@ listcontainer {
 
 #recipe-list img {
     width: 20%
+}
+
+#rec-instr, #rec-description, #rec-time, #rec-servings, #rec-ingr {
+    font-size: small;
+    display: block;
+    max-width: 700px;
+    padding: 5px;
+
 }
 
 #message {

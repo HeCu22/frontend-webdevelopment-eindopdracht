@@ -1,4 +1,5 @@
 function createCuisineList(cuisines) {
+    console.log('ikk ben hier');
 
     const cuisineList = document.getElementById('cuisine-list');
 
